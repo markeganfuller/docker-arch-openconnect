@@ -6,7 +6,7 @@ FROM archlinux/base
 # explicitly specifying so its better to have it there
 RUN pacman -Syu --noconfirm  && \
     pacman -S base  && \
-    pacman -S --noconfirm openconnect
+    pacman -S --noconfirm openconnect netstat awk route ifconfig
 
 ENTRYPOINT ["openconnect"]
 CMD ["--help"]
