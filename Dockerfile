@@ -7,6 +7,7 @@ FROM archlinux/base
 #
 RUN pacman -Syu --noconfirm  && pacman -S --noconfirm base
 
+RUN pacman -S --noconfirm net-tools
 RUN pacman -S --noconfirm openconnect
 
 # Configure tun device needed for vpn
